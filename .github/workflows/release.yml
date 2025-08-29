@@ -1,0 +1,78 @@
+name: Release and Publish
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version to release (e.g., 1.0.0)'
+        required: false
+        type: string
+
+env:
+  JAVA_VERSION: '17'
+  JAVA_DISTRIBUTION: 'temurin'
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up JDK ${{ env.JAVA_VERSION }}-${{ env.JAVA_DISTRIBUTION }}
+        uses: actions/setup-java@v4
+        with:
+          java-version: ${{ env.JAVA_VERSION }}
+          distribution: ${{ env.JAVA_DISTRIBUTION }}
+
+      - name: Determine version
+        id: version
+        run: |
+          if [[ "${{ github.event_name }}" == "workflow_dispatch" && "${{ github.event.inputs.version }}" != "" ]]; then
+            VERSION="${{ github.event.inputs.version }}"
+          else
+            VERSION=${GITHUB_REF#refs/tags/v}
+          fi
+          echo "VERSION=$VERSION" >> $GITHUB_OUTPUT
+          echo "Release version: $VERSION"
+
+      - name: Update plugin version
+        run: |
+          sed -i "s/<version>.*<\/version>/<version>${{ steps.version.outputs.VERSION }}<\/version>/" resources/META-INF/plugin.xml
+
+      - name: Build JAR
+        run: |
+          cd resources
+          jar cf ../aurora-code-${{ steps.version.outputs.VERSION }}.jar *
+
+      - name: Verify JAR contents
+        run: jar tf aurora-code-${{ steps.version.outputs.VERSION }}.jar
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            aurora-code-${{ steps.version.outputs.VERSION }}.jar
+          tag_name: v${{ steps.version.outputs.VERSION }}
+          name: AuroraCode Theme ${{ steps.version.outputs.VERSION }}
+          body: |
+            ## AuroraCode Theme v${{ steps.version.outputs.VERSION }}
+            
+            ### Installation
+            1. Download the JAR file below
+            2. Go to File → Settings → Plugins in your JetBrains IDE
+            3. Click gear icon → Install Plugin from Disk
+            4. Select the downloaded JAR file and restart IDE
+            5. Go to File → Settings → Editor → Color Scheme
+            6. Select "AuroraCode"
+
+          generate_release_notes: true
