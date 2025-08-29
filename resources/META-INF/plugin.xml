@@ -1,0 +1,26 @@
+<idea-plugin>
+    <id>aurora-code</id>
+    <version>1.0.0</version>
+
+    <name>AuroraCode</name>
+    <category>UI</category>
+
+    <vendor url="https://github.com/bxacosta/aurora-code-theme">bxacosta</vendor>
+
+    <idea-version since-build="251"/>
+
+    <description><![CDATA[
+        A minimalistic dark theme with clean syntax highlighting.<br>
+        <em>Simple, elegant coding experience.</em>
+    ]]></description>
+
+    <change-notes><![CDATA[
+        Initial release of the theme.
+    ]]></change-notes>
+
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <themeProvider id="aurora-code" path="/theme/auroracode.theme.json"/>
+    </extensions>
+</idea-plugin>
