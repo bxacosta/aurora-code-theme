@@ -52,27 +52,16 @@ jobs:
       - name: Build JAR
         run: |
           cd resources
-          jar cf ../aurora-code-${{ steps.version.outputs.VERSION }}.jar *
+          jar cf ../aurora-${{ steps.version.outputs.VERSION }}.jar *
 
       - name: Verify JAR contents
-        run: jar tf aurora-code-${{ steps.version.outputs.VERSION }}.jar
+        run: jar tf aurora-${{ steps.version.outputs.VERSION }}.jar
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
         with:
           files: |
-            aurora-code-${{ steps.version.outputs.VERSION }}.jar
+            aurora-${{ steps.version.outputs.VERSION }}.jar
           tag_name: v${{ steps.version.outputs.VERSION }}
-          name: AuroraCode Theme ${{ steps.version.outputs.VERSION }}
-          body: |
-            ## AuroraCode Theme v${{ steps.version.outputs.VERSION }}
-            
-            ### Installation
-            1. Download the JAR file below
-            2. Go to File → Settings → Plugins in your JetBrains IDE
-            3. Click gear icon → Install Plugin from Disk
-            4. Select the downloaded JAR file and restart IDE
-            5. Go to File → Settings → Editor → Color Scheme
-            6. Select "AuroraCode"
-
+          name: Release ${{ steps.version.outputs.VERSION }}
           generate_release_notes: true
