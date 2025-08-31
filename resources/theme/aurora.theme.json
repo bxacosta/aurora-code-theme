@@ -224,18 +224,6 @@
         "hoverBackground": "#161b22"
       }
     },
-    "Popup": {
-      "background": "#151b23",
-      "paintBorder": false,
-      "borderColor": "#3d424b",
-      "Toolbar.borderColor": "#3d424b",
-      "Header.activeBackground": "#414855",
-      "Header.inactiveBackground": "#2c313a",
-      "Advertiser": {
-        "foreground": "#151b23",
-        "borderColor": "#2d3137"
-      }
-    },
     "ProgressBar": {
       "trackColor": "#1D1D26",
       "progressColor": "accentColor",
@@ -248,18 +236,6 @@
     },
     "RunWidget": {
       "foreground": "#eef3ff"
-    },
-    "SearchEverywhere": {
-      "Advertiser.foreground": "#151b23",
-      "Header.background": "backgroundColor",
-      "SearchField": {
-        "background": "#0d1117",
-        "borderColor": "#1b1d21"
-      },
-      "Tab": {
-        "selectedForeground": "foregroundColor",
-        "selectedBackground": "#161b22"
-      }
     },
     "SearchMatch": {
       "startBackground": "accentColor",
