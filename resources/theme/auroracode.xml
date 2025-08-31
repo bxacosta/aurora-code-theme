@@ -23,9 +23,13 @@
         <option name="DOCUMENTATION_COLOR" value="3D424B"/>
         <option name="DOC_COMMENT_LINK" value="8EC5FF"/>
         <option name="ERROR_HINT" value="781732"/>
-        <option name="FILESTATUS_ADDED" value="85E89D"/>
-        <option name="FILESTATUS_IDEA_FILESTATUS_IGNORED" value="C69026"/>
-        <option name="FILESTATUS_MODIFIED" value="35ABFF"/>
+        <option name="FILESTATUS_ADDED" value="89CA78"/>
+        <option name="FILESTATUS_DELETED" value="68737E"/>
+        <option name="FILESTATUS_IDEA_FILESTATUS_IGNORED" value="68737E"/>
+        <option name="FILESTATUS_IDEA_SVN_FILESTATUS_EXTERNAL" value="72A038"/>
+        <option name="FILESTATUS_IDEA_SVN_FILESTATUS_OBSTRUCTED" value="727238"/>
+        <option name="FILESTATUS_IDEA_SVN_REPLACED" value="85E89D"/>
+        <option name="FILESTATUS_MODIFIED" value="79B8FF"/>
         <option name="FILESTATUS_UNKNOWN" value="FF7B72"/>
         <option name="FOLDED_TEXT_BORDER_COLOR" value=""/>
         <option name="GUTTER_BACKGROUND" value="0D1117"/>
@@ -141,13 +145,13 @@
         </option>
         <option name="CONSOLE_RED_BRIGHT_OUTPUT">
             <value>
-                <option name="FOREGROUND" value="e5534b"/>
+                <option name="FOREGROUND" value="ef596f"/>
                 <option name="FONT_TYPE" value="1"/>
             </value>
         </option>
         <option name="CONSOLE_RED_OUTPUT">
             <value>
-                <option name="FOREGROUND" value="ffa198"/>
+                <option name="FOREGROUND" value="ef596f"/>
             </value>
         </option>
         <option name="CONSOLE_SYSTEM_OUTPUT">
@@ -172,36 +176,6 @@
             </value>
         </option>
         <option name="CONSOLE_YELLOW_OUTPUT">
-            <value>
-                <option name="FOREGROUND" value="d29922"/>
-            </value>
-        </option>
-        <option name="LOG_DEBUG_OUTPUT">
-            <value>
-                <option name="FOREGROUND" value="a5d6ff"/>
-            </value>
-        </option>
-        <option name="LOG_ERROR_OUTPUT">
-            <value>
-                <option name="FOREGROUND" value="ffa198"/>
-            </value>
-        </option>
-        <option name="LOG_EXPIRED_ENTRY">
-            <value>
-                <option name="FOREGROUND" value="768390"/>
-            </value>
-        </option>
-        <option name="LOG_INFO_OUTPUT">
-            <value>
-                <option name="FOREGROUND" value="7ee787"/>
-            </value>
-        </option>
-        <option name="LOG_VERBOSE_OUTPUT">
-            <value>
-                <option name="FOREGROUND" value="2f81f7"/>
-            </value>
-        </option>
-        <option name="LOG_WARNING_OUTPUT">
             <value>
                 <option name="FOREGROUND" value="d29922"/>
             </value>
@@ -548,6 +522,36 @@
         <option name="LIVE_TEMPLATE_INACTIVE_SEGMENT">
             <value>
                 <option name="EFFECT_COLOR" value="878e9b"/>
+            </value>
+        </option>
+        <option name="LOG_DEBUG_OUTPUT">
+            <value>
+                <option name="FOREGROUND" value="a5d6ff"/>
+            </value>
+        </option>
+        <option name="LOG_ERROR_OUTPUT">
+            <value>
+                <option name="FOREGROUND" value="ef596f"/>
+            </value>
+        </option>
+        <option name="LOG_EXPIRED_ENTRY">
+            <value>
+                <option name="FOREGROUND" value="768390"/>
+            </value>
+        </option>
+        <option name="LOG_INFO_OUTPUT">
+            <value>
+                <option name="FOREGROUND" value="7ee787"/>
+            </value>
+        </option>
+        <option name="LOG_VERBOSE_OUTPUT">
+            <value>
+                <option name="FOREGROUND" value="2f81f7"/>
+            </value>
+        </option>
+        <option name="LOG_WARNING_OUTPUT">
+            <value>
+                <option name="FOREGROUND" value="d29922"/>
             </value>
         </option>
         <option name="MARKED_FOR_REMOVAL_ATTRIBUTES">
