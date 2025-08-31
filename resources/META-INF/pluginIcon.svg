@@ -1,5 +1,4 @@
 <svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
-    <rect width="400" height="400" rx="80" fill="#0d1117"/>
     <defs>
         <linearGradient id="diagonal" x1="0%" y1="0%" x2="100%" y2="100%">
             <stop offset="0%" style="stop-color:#5de4c7;stop-opacity:1"/>
@@ -9,6 +8,6 @@
         </linearGradient>
     </defs>
     <polygon points="200,0 400,200 200,400 0,200" fill="url(#diagonal)"/>
-    <polygon points="200,60 340,200 200,340 60,200" fill="#0d1117" opacity="0.4"/>
-    <polygon points="200,130 270,200 200,270 130,200" fill="#f0f6fc" opacity="0.9"/>
+    <polygon points="200,70 330,200 200,330 70,200" fill="#0d1117" opacity="0.4"/>
+    <polygon points="200,140 260,200 200,260 140,200" fill="#e4f0fb" opacity="0.9"/>
 </svg>
