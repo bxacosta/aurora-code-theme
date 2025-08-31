@@ -1,8 +1,8 @@
 {
-  "name": "auroracode",
+  "name": "Aurora",
   "dark": true,
-  "author": "auroracode",
-  "editorScheme": "/theme/auroracode.xml",
+  "author": "bxacosta",
+  "editorScheme": "/theme/aurora.xml",
   "colors": {
     "accentColor": "#2f81f7",
     "backgroundColor": "#0d1117",

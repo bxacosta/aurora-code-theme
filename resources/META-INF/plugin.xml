@@ -2,7 +2,7 @@
     <id>aurora-code</id>
     <version>1.0.0</version>
 
-    <name>AuroraCode</name>
+    <name>Aurora</name>
     <category>UI</category>
 
     <vendor url="https://github.com/bxacosta/aurora-code-theme">bxacosta</vendor>
@@ -21,6 +21,6 @@
     <depends>com.intellij.modules.platform</depends>
 
     <extensions defaultExtensionNs="com.intellij">
-        <themeProvider id="aurora-code" path="/theme/auroracode.theme.json"/>
+        <themeProvider id="aurora-code" path="/theme/aurora.theme.json"/>
     </extensions>
 </idea-plugin>
